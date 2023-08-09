@@ -9,4 +9,6 @@ Main project in Jonas Schmedtmann's Ultimate React Course.
 - React Query
 - React Hook Form
 - Context Api
+- Supabase
 - styled-components
+  
