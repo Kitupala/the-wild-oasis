@@ -21,8 +21,7 @@ function Sidebar() {
       <Logo />
       <MainNav />
 
-      {/* Use this Uploader to upload fake data
-       <Uploader /> */}
+      <Uploader />
     </StyledSidebar>
   );
 }
