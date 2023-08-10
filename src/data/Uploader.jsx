@@ -7,6 +7,7 @@ import { subtractDates } from "../utils/helpers";
 import { bookings } from "./data-bookings";
 import { cabins } from "./data-cabins";
 import { guests } from "./data-guests";
+import Heading from "../ui/Heading";
 
 // const originalSettings = {
 //   minBookingLength: 3,
@@ -129,7 +130,7 @@ function Uploader() {
     <div
       style={{
         marginTop: "auto",
-        backgroundColor: "#e0e7ff",
+        backgroundColor: "var(--color-grey-50)",
         padding: "8px",
         borderRadius: "5px",
         textAlign: "center",
@@ -138,13 +139,29 @@ function Uploader() {
         gap: "8px",
       }}
     >
-      <h3>SAMPLE DATA</h3>
+      <div className="hover">
+        <Heading as="h3">SAMPLE DATA</Heading>
+        <span className="tooltip" id="fade">
+          You can play around with bookings and stuff &mdash; they can be easily
+          reloaded from here.
+        </span>
+      </div>
 
-      <Button onClick={uploadAll} disabled={isLoading}>
+      <Button
+        $size="small"
+        $variation="secondary"
+        onClick={uploadAll}
+        disabled={isLoading}
+      >
         Upload ALL
       </Button>
 
-      <Button onClick={uploadBookings} disabled={isLoading}>
+      <Button
+        $size="small"
+        $variation="secondary"
+        onClick={uploadBookings}
+        disabled={isLoading}
+      >
         Upload bookings ONLY
       </Button>
     </div>
