@@ -185,6 +185,42 @@ img {
   filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
 }
 
+/* This is for styling Uploader on Sidebar */
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  top: -8px;
+  left: 110%;
+  z-index: 1;
+  width: 300px;
+  color: var(--color-grey-600);
+  font-size: 12px;
+  font-weight: 500;
+  background-color: var(--color-grey-0);
+  border-radius: var(--border-radius-md);
+  padding: 10px 15px 10px 15px;
+  box-shadow: var(--shadow-lg);
+}
+
+.hover {
+  position: relative;
+  display: inline-block;
+}
+
+#fade {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.hover:hover #fade { opacity: 1; }
+
+
+.hover:hover .tooltip {
+  visibility: visible;
+}
+
+
+
 `;
 
 export default GlobalStyle;
